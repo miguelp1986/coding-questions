@@ -40,7 +40,7 @@ def removeDuplicatesFromLinkedList(linkedList):
                     print_linked_list(head)
 
                 elif first_duplicate != previous and first_duplicate.value == previous.value:
-                    # current is the end of a chain of duplicates. 
+                    # current is the end of a chain of duplicates.
                     previous.next = None
                     first_duplicate.next = current
                     first_duplicate = current
@@ -94,7 +94,7 @@ def removeDuplicatesFromLinkedList(linkedList):
                 print_linked_list(head)
 
     return head
-    
+
 
 def create_linked_list(list_of_values):
     head = LinkedList(list_of_values[0])
@@ -103,7 +103,7 @@ def create_linked_list(list_of_values):
     for value in list_of_values[1:]:
         current.next = LinkedList(value)
         current = current.next
-    
+
     return head
 
 
@@ -118,7 +118,7 @@ def print_linked_list(linked_list):
 
             else:
                 print(current.value)
-            
+
             current = current.next
 
         print()

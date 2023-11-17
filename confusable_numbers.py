@@ -1,10 +1,10 @@
-def get_confusable_numbers(BIDDERS:list) -> list:
+def get_confusable_numbers(BIDDERS: list) -> list:
     """
     return a list of numbers within bidders that are confusable
     confusable numbers are numbers that can be inverted and still be
     a valid number. i.e. 68 -> 89
     O(n*c) time | O(c) space where c are the digits from a list of numbers n
-    TODO: you didn't catch the edge case if we have '111' or '666'. 
+    TODO: you didn't catch the edge case if we have '111' or '666'.
     do we consider these confusable? I don't think so.
     """
     CONFUSABLE_NUMBERS = []
@@ -17,7 +17,7 @@ def get_confusable_numbers(BIDDERS:list) -> list:
     return CONFUSABLE_NUMBERS
 
 
-def get_confusable_number(number:int) -> str:
+def get_confusable_number(number: int) -> str:
     """
     return the confusable number of a number
     return None if not a confusable number
@@ -34,7 +34,7 @@ def get_confusable_number(number:int) -> str:
     return confusable_number
 
 
-def get_confusable_digit(digit:str) -> str:
+def get_confusable_digit(digit: str) -> str:
     """
     return a confusable digit of a digit
     return None if not a confusable digit
@@ -53,6 +53,6 @@ def get_confusable_digit(digit:str) -> str:
         return None
 
 
-BIDDERS = [num for num in range(1,801)]
+BIDDERS = [num for num in range(1, 801)]
 CONFUSABLE_NUMBERS = get_confusable_numbers(BIDDERS)
 print(CONFUSABLE_NUMBERS)
